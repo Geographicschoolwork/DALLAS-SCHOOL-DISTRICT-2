@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dsd2 login</title>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+
+            // Define your password and corresponding redirect links
+            const routes = {
+                "1game1": "regame.html",
+                "1roman": "Roman.html",
+                "admin": "index.html"
+            };
+
+            if (routes[password]) {
+                window.location.href = routes[password];
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Password</h1>
+    <input type="password" id="password" placeholder="Enter your password">
+    <button onclick="checkPassword()">Submit</button>
+</body>
+</html>
